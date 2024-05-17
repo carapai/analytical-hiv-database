@@ -52,6 +52,10 @@ const insert = async ({ data }: { data: { encounters: string[][]; patients: stri
 					data.patients,
 				),
 			);
+			console.log(format(
+				"INSERT INTO staging_patient_encounters(case_id,encounter_id,encounter_date,facility_id,encounter_type,obs) VALUES %L ON CONFLICT (encounter_id) DO UPDATE SET case_id = EXCLUDED.case_id,encounter_date = EXCLUDED.encounter_date,facility_id = EXCLUDED.facility_id,encounter_type = EXCLUDED.encounter_type,obs=EXCLUDED.obs",
+				data.encounters,
+			))
 			if (data.encounters.length > 0) {
 				await connection.query(
 					format(
