@@ -1,11 +1,12 @@
-/* eslint-disable @typescript-eslint/no-floating-promises */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Bull from "bull";
 import { fromPairs } from "lodash";
 import type { Context, Service, ServiceSchema, ServiceSettingSchema } from "moleculer";
 import { Pool } from "pg";
 import format from "pg-format";
+
+/* eslint-disable @typescript-eslint/no-floating-promises */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 export interface ActionHelloParams {
 	name: string;
@@ -46,18 +47,22 @@ const insert = async ({ data }: { data: { encounters: string[][]; patients: stri
 		if (data.patients.length > 0) {
 			await connection.query(
 				format(
-					`INSERT INTO staging_patient ( case_id,sex,date_of_birth,deceased,date_of_death,facility_id,patient_clinic_no,patient_name,phone_number)
-                            VALUES %L ON CONFLICT (case_id) DO UPDATE SET sex = EXCLUDED.sex,date_of_birth = EXCLUDED.date_of_birth,deceased = EXCLUDED.deceased,date_of_death = EXCLUDED.date_of_death,
-                            facility_id = EXCLUDED.facility_id,patient_clinic_no = EXCLUDED.patient_clinic_no,patient_name=EXCLUDED.patient_name,phone_number=EXCLUDED.phone_number,updated_date=current_timestamp;`,
-					data.patients,
-				),
+					`INSERT INTO staging_patient (case_id, sex, date_of_birth, deceased, date_of_death, facility_id, patient_clinic_no, patient_name, phone_number, country,district, subcounty,parish, village,national_id)
+                    VALUES %L ON CONFLICT (case_id) DO UPDATE
+                    SET sex = EXCLUDED.sex, date_of_birth = EXCLUDED.date_of_birth, deceased = EXCLUDED.deceased, date_of_death = EXCLUDED.date_of_death,
+                    facility_id = EXCLUDED.facility_id, patient_clinic_no = EXCLUDED.patient_clinic_no, patient_name = EXCLUDED.patient_name,
+                    phone_number = EXCLUDED.phone_number, country = EXCLUDED.country,district=EXCLUDED.district,subcounty = EXCLUDED.subcounty,parish=EXCLUDED.parish ,village = EXCLUDED.village,
+					national_id = EXCLUDED.national_id,
+                    updated_date = current_timestamp;`,
+					data.patients
+				)
 			);
 			if (data.encounters.length > 0) {
 				await connection.query(
 					format(
-						"INSERT INTO staging_patient_encounters(case_id,encounter_id,encounter_date,facility_id,encounter_type,obs) VALUES %L ON CONFLICT (encounter_id) DO UPDATE SET case_id = EXCLUDED.case_id,encounter_date = EXCLUDED.encounter_date,facility_id = EXCLUDED.facility_id,encounter_type = EXCLUDED.encounter_type,obs=EXCLUDED.obs,updated_date=current_timestamp",
-						data.encounters,
-					),
+						"INSERT INTO staging_patient_encounters (case_id, encounter_id, encounter_date, facility_id, encounter_type, obs) VALUES %L ON CONFLICT (encounter_id) DO UPDATE SET case_id = EXCLUDED.case_id, encounter_date = EXCLUDED.encounter_date, facility_id = EXCLUDED.facility_id, encounter_type = EXCLUDED.encounter_type, obs = EXCLUDED.obs, updated_date = current_timestamp",
+						data.encounters
+					)
 				);
 			}
 		}
@@ -69,24 +74,16 @@ const insert = async ({ data }: { data: { encounters: string[][]; patients: stri
 };
 
 fhirQueue.process((job) => insert(job.data));
+
 const GreeterService: ServiceSchema<GreeterSettings> = {
 	name: "fhir",
 
-	/**
-	 * Settings
-	 */
 	settings: {
 		defaultName: "Fhir",
 	},
 
-	/**
-	 * Dependencies
-	 */
 	dependencies: [],
 
-	/**
-	 * Actions
-	 */
 	actions: {
 		add: {
 			rest: {
@@ -97,6 +94,7 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 				let allPatients: any[] = [];
 				let allObservations: any[] = [];
 				let allEncounters: any[] = [];
+
 				ctx.params.entry.forEach((entry: any) => {
 					if (entry.resource && entry.resource.resourceType === "Patient") {
 						allPatients = [...allPatients, entry];
@@ -146,17 +144,9 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 		},
 	},
 
-	/**
-	 * Events
-	 */
-	events: {},
-
-	/**
-	 * Methods
-	 */
 	methods: {
 		processPatients(patients) {
-			this.logger.info("Are we here");
+			this.logger.info("Processing Patients");
 			const processedPatient = [];
 			for (const patient of patients) {
 				let patientInfo = {
@@ -168,6 +158,12 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 					date_of_death: patient.resource.deceasedDateTime || null,
 					facility_id: "",
 					patient_clinic_number: null,
+					nationa_ID_number: null,
+					country: null,
+					district:null,
+					subcounty: null,
+					parish:null,
+					village: null,
 					phone_number: null,
 				};
 
@@ -183,6 +179,47 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 						};
 					}
 				}
+				if (patient.resource.identifier) {
+					const nationalIDNo = patient.resource.identifier.find(
+						({ type: { text } }: { type: { text: string } }) =>
+							text === "National ID No.",
+					);
+					if (nationalIDNo) {
+						patientInfo = {
+							...patientInfo,
+							nationa_ID_number: nationalIDNo.value,
+						};
+					}
+				}
+
+				if (patient.resource.address && patient.resource.address.length > 0) {
+					const address = patient.resource.address[0];
+
+					if (address.extension) {
+						const addressExtensions = address.extension.find(
+							(ext: { url: string }) => ext.url === "http://fhir.openmrs.org/ext/address"
+						);
+						if (addressExtensions && addressExtensions.extension) {
+							patientInfo.village = addressExtensions.extension.find(
+								(ext: { url: string }) => ext.url === "http://fhir.openmrs.org/ext/address#village"
+							)?.valueString;
+
+							patientInfo.parish = addressExtensions.extension.find(
+								(ext: { url: string }) => ext.url === "http://fhir.openmrs.org/ext/address#parish"
+							)?.valueString;
+
+							patientInfo.subcounty = addressExtensions.extension.find(
+								(ext: { url: string }) => ext.url === "http://fhir.openmrs.org/ext/address#subcounty"
+							)?.valueString;
+						}
+					}
+
+					patientInfo.country = address.country;
+					// Extract District from City
+					patientInfo.district = address.district || null; // Assign city value to district
+
+				}
+
 				if (patient.resource.name) {
 					const givenName = patient.resource.name[0]?.given?.[0] || "";
 					const familyName = patient.resource.name[0]?.family || "";
@@ -192,6 +229,7 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 						patient_name: patientName.trim(),
 					};
 				}
+
 				if (patient.resource.telecom) {
 					const telecomValue = patient.resource.telecom[0].value;
 					patientInfo = {
@@ -208,12 +246,14 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 						)[1],
 					};
 				}
+
 				if (patientInfo.date_of_birth && patientInfo.date_of_birth.length === 4) {
 					patientInfo = {
 						...patientInfo,
 						date_of_birth: `${patientInfo.date_of_birth}-01-01`,
 					};
 				}
+
 				if (
 					patientInfo.case_id &&
 					patientInfo.date_of_birth &&
@@ -231,13 +271,44 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 						patientInfo.patient_clinic_number,
 						patientInfo.patient_name,
 						patientInfo.phone_number,
+						patientInfo.country,
+						patientInfo.district,
+						patientInfo.subcounty,
+						patientInfo.parish,
+						patientInfo.village,
+						patientInfo.nationa_ID_number
 					]);
 				}
 			}
 			return processedPatient;
 		},
 
+		processEncounters(encounters) {
+			this.logger.info("Processing Encounters");
+			const processed = [];
+			if (encounters && encounters.length > 0) {
+				for (const bundle of encounters) {
+					const { id, type, period, subject, serviceProvider } = bundle.resource;
+					if (type && type.length > 0 && id && period && subject && serviceProvider) {
+						const [
+							{
+								coding: [{ code }],
+							},
+						] = type;
+						const { start: encounterDate } = period;
+						const { reference } = subject;
+						const { reference: facility } = serviceProvider;
+						const patientId = String(reference).split("/")[1];
+						const facilityId = String(facility).split("/")[1];
+						processed.push([patientId, id, encounterDate, facilityId, code]);
+					}
+				}
+			}
+			return processed;
+		},
+
 		processObs(observations) {
+			this.logger.info("Processing Observations");
 			const obs = [];
 			if (observations && observations.length > 0) {
 				for (const bundle of observations) {
@@ -288,45 +359,7 @@ const GreeterService: ServiceSchema<GreeterSettings> = {
 			}
 			return obs;
 		},
-
-		processEncounters(encounters) {
-			const processed = [];
-			if (encounters && encounters.length > 0) {
-				for (const bundle of encounters) {
-					const { id, type, period, subject, serviceProvider } = bundle.resource;
-					if (type && type.length > 0 && id && period && subject && serviceProvider) {
-						const [
-							{
-								coding: [{ code }],
-							},
-						] = type;
-						const { start: encounterDate } = period;
-						const { reference } = subject;
-						const { reference: facility } = serviceProvider;
-						const patientId = String(reference).split("/")[1];
-						const facilityId = String(facility).split("/")[1];
-						processed.push([patientId, id, encounterDate, facilityId, code]);
-					}
-				}
-			}
-			return processed;
-		},
 	},
-
-	/**
-	 * Service created lifecycle event handler
-	 */
-	created() {},
-
-	/**
-	 * Service started lifecycle event handler
-	 */
-	async started() {},
-
-	/**
-	 * Service stopped lifecycle event handler
-	 */
-	async stopped() {},
 };
 
 export default GreeterService;

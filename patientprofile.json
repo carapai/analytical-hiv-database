@@ -1,0 +1,3211 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "resource": {
+                "identifier": [
+                    {
+                        "extension": [
+                            {
+                                "valueReference": {
+                                    "reference": "Location/86863db4-6101-4ecf-9a86-5e716d6504e4",
+                                    "display": "ART Clinic",
+                                    "type": "Location"
+                                },
+                                "url": "http://fhir.openmrs.org/ext/patient/identifier#location"
+                            }
+                        ],
+                        "system": "http://openclientregistry.org/fhir/sourceid",
+                        "use": "official",
+                        "id": "68b87568-6642-48e1-95ab-d2b1c8532e19",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "UgandaEMR",
+                                    "code": "05a29f94-c0ed-11e2-94be-8c13b969e334"
+                                }
+                            ],
+                            "text": "OpenMRS ID"
+                        },
+                        "value": "10968K"
+                    },
+                    {
+                        "use": "usual",
+                        "id": "9128a386-55ef-46fb-87be-b7c8780163a2",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "UgandaEMR",
+                                    "code": "e1731641-30ab-102d-86b0-7a5022ba4115"
+                                }
+                            ],
+                            "text": "HIV Clinic No."
+                        },
+                        "value": "NGH 1627"
+                    },
+                  {
+                    "use": "usual",
+                    "id": "9128a386-55ef-46fb-87be-b7c8780163a2",
+                    "type": {
+                      "coding": [
+                        {
+                          "system": "UgandaEMR",
+                          "code": "e1731641-30ab-102d-86b0-7a5022ba4115"
+                        }
+                      ],
+                      "text": "National ID No."
+                    },
+                    "value": "CM940984101VUPG"
+                  }
+                ],
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "6573a33c-e0b2-4ba3-a202-7375020e1ad6",
+                        "recorded": "2021-07-19T16:42:23.000+03:00",
+                        "resourceType": "Provenance"
+                    },
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "UPDATE",
+                                    "display": "revise"
+                                }
+                            ]
+                        },
+                        "id": "6d9adf6e-a0b9-44af-8229-ed8fbbf576ee",
+                        "recorded": "2021-07-19T16:47:46.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "address": [
+                    {
+                        "country": "Uganda",
+                        "extension": [
+                            {
+                                "extension": [
+                                    {
+                                        "valueString": "NEBBI TOWN COUNCIL",
+                                        "url": "http://fhir.openmrs.org/ext/address#subcounty"
+                                    },
+                                    {
+                                        "valueString": "NEBBI",
+                                        "url": "http://fhir.openmrs.org/ext/address#parish"
+                                    },
+                                    {
+                                        "valueString": "NEBBI",
+                                        "url": "http://fhir.openmrs.org/ext/address#village"
+                                    }
+                                ],
+                                "url": "http://fhir.openmrs.org/ext/address"
+                            }
+                        ],
+                        "use": "home",
+                        "id": "725a4b27-331a-456a-98b0-2dfd36acf836",
+                        "city": "PADYERE"
+                    }
+                ],
+                "managingOrganization": {
+                    "reference": "Organization/iEdI13kUo0h",
+                    "identifier": {
+                        "system": "https://hmis.health.go.ug/",
+                        "use": "official",
+                        "value": "iEdI13kUo0h"
+                    },
+                    "display": "Nebbi General Hospital",
+                    "type": "Organization"
+                },
+                "gender": "male",
+                "meta": {
+                    "lastUpdated": "2021-07-19T16:47:46.000+03:00"
+                },
+                "deceasedDateTime": "2018-04-30T16:45:00+03:00",
+                "name": [
+                    {
+                        "given": [
+                            "RAPHAEL"
+                        ],
+                        "use": "official",
+                        "id": "7eef915e-a0cd-40b9-a7a3-87844834b30b",
+                        "family": "ABEKA"
+                    }
+                ],
+                "active": true,
+                "id": "e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                "birthDate": "1964-01-01",
+                "resourceType": "Patient"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Person",
+                "id": "e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                "meta": {
+                    "lastUpdated": "2021-07-19T16:47:46.000+03:00"
+                },
+                "contained": [
+                    {
+                        "resourceType": "Provenance",
+                        "id": "9f3371f2-6c9e-4212-ae5e-3cf1d6288346",
+                        "recorded": "2021-07-19T16:42:23.000+03:00",
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "agent": [
+                            {
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "type": "Practitioner",
+                                    "display": "John Lugemwa"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "resourceType": "Provenance",
+                        "id": "d42e8d97-338c-4c0e-8a0f-25ce357c3af4",
+                        "recorded": "2021-07-19T16:47:46.000+03:00",
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "UPDATE",
+                                    "display": "revise"
+                                }
+                            ]
+                        },
+                        "agent": [
+                            {
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "type": "Practitioner",
+                                    "display": "John Lugemwa"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "name": [
+                    {
+                        "id": "7eef915e-a0cd-40b9-a7a3-87844834b30b",
+                        "family": "ABEKA",
+                        "given": [
+                            "RAPHAEL"
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1964",
+                "address": [
+                    {
+                        "id": "725a4b27-331a-456a-98b0-2dfd36acf836",
+                        "extension": [
+                            {
+                                "url": "http://fhir.openmrs.org/ext/address",
+                                "extension": [
+                                    {
+                                        "url": "http://fhir.openmrs.org/ext/address#address3",
+                                        "valueString": "NEBBI TOWN COUNCIL"
+                                    },
+                                    {
+                                        "url": "http://fhir.openmrs.org/ext/address#address4",
+                                        "valueString": "NEBBI"
+                                    },
+                                    {
+                                        "url": "http://fhir.openmrs.org/ext/address#address5",
+                                        "valueString": "NEBBI"
+                                    }
+                                ]
+                            }
+                        ],
+                        "use": "home",
+                        "state": "PADYERE",
+                        "country": "Uganda"
+                    }
+                ],
+                "active": true,
+                "link": [
+                    {
+                        "target": {
+                            "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                            "type": "Patient",
+                            "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Person/e3117126-4f94-460b-a272-1e36dfb4ffd2"
+            }
+        },
+        {
+            "resource": {
+                "serviceType": {
+                    "coding": [
+                        {
+                            "code": "dcd87b79-30ab-102d-86b0-7a5022ba4115",
+                            "display": "MEDICAL OUTPATIENT"
+                        }
+                    ],
+                    "text": "Out-Patient"
+                },
+                "partOf": {
+                    "reference": "Encounter/59157dc2-2825-4945-9fdc-745474d33be4",
+                    "type": "Encounter"
+                },
+                "period": {
+                    "start": "2003-12-16T00:00:00+03:00"
+                },
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://fhir.openmrs.org/code-system/encounter-type",
+                                "code": "8d5b2be0-c2cc-11de-8d13-0010c6dffd0f",
+                                "display": "ART Card - Encounter"
+                            }
+                        ]
+                    }
+                ],
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/215b7e4c-01b6-11e8-b4a4-bc305baa8372",
+                            "identifier": {
+                                "value": "215b"
+                            },
+                            "display": "Nicholas Opio (Identifier: 215b)",
+                            "type": "Practitioner"
+                        }
+                    }
+                ],
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "de3c8102-a579-44f4-9b29-d1501e4164bd",
+                        "recorded": "2021-07-19T16:47:10.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "meta": {
+                    "tag": [
+                        {
+                            "system": "http://fhir.openmrs.org/ext/encounter-tag",
+                            "code": "encounter",
+                            "display": "Encounter"
+                        }
+                    ]
+                },
+                "serviceProvider": {
+                    "reference": "Organization/iEdI13kUo0h",
+                    "identifier": {
+                        "system": "https://hmis.health.go.ug/",
+                        "use": "official",
+                        "value": "iEdI13kUo0h"
+                    },
+                    "display": "Nebbi General Hospital",
+                    "type": "Organization"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "reference": "Location/86863db4-6101-4ecf-9a86-5e716d6504e4",
+                            "display": "ART Clinic",
+                            "type": "Location"
+                        }
+                    }
+                ],
+                "id": "925b104a-57bd-4477-b44c-9b545137ff72",
+                "class": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "code": "AMB"
+                },
+                "resourceType": "Encounter",
+                "status": "unknown"
+            },
+            "request": {
+                "method": "POST"
+            }
+        },
+        {
+            "resource": {
+                "serviceType": {
+                    "coding": [
+                        {
+                            "code": "dcd87b79-30ab-102d-86b0-7a5022ba4115",
+                            "display": "MEDICAL OUTPATIENT"
+                        }
+                    ],
+                    "text": "Out-Patient"
+                },
+                "partOf": {
+                    "reference": "Encounter/59157dc2-2825-4945-9fdc-745474d33be4",
+                    "type": "Encounter"
+                },
+                "period": {
+                    "start": "2003-12-16T00:00:00+03:00"
+                },
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://fhir.openmrs.org/code-system/encounter-type",
+                                "code": "8d5b27bc-c2cc-11de-8d13-0010c6dffd0f",
+                                "display": "ART Card - Summary"
+                            }
+                        ]
+                    }
+                ],
+                "participant": [
+                    {
+                        "individual": {
+                            "reference": "Practitioner/215b7e4c-01b6-11e8-b4a4-bc305baa8372",
+                            "identifier": {
+                                "value": "215b"
+                            },
+                            "display": "Nicholas Opio (Identifier: 215b)",
+                            "type": "Practitioner"
+                        }
+                    }
+                ],
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "1dbfa8b5-7403-4a32-b387-bc161ec219f9",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "meta": {
+                    "tag": [
+                        {
+                            "system": "http://fhir.openmrs.org/ext/encounter-tag",
+                            "code": "encounter",
+                            "display": "Encounter"
+                        }
+                    ]
+                },
+                "serviceProvider": {
+                    "reference": "Organization/iEdI13kUo0h",
+                    "identifier": {
+                        "system": "https://hmis.health.go.ug/",
+                        "use": "official",
+                        "value": "iEdI13kUo0h"
+                    },
+                    "display": "Nebbi General Hospital",
+                    "type": "Organization"
+                },
+                "location": [
+                    {
+                        "location": {
+                            "reference": "Location/629d78e9-93e5-43b0-ad8a-48313fd99117",
+                            "display": "Nebbi General Hospital",
+                            "type": "Location"
+                        }
+                    }
+                ],
+                "id": "945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                "class": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "code": "AMB"
+                },
+                "resourceType": "Encounter",
+                "status": "unknown"
+            },
+            "request": {
+                "method": "POST"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "26965477-bcff-41c6-89ad-f1719320eaa5",
+                        "recorded": "2021-07-19T16:47:11.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "160856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                            "display": "Quantity of medication prescribed per dose"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "160856",
+                            "display": "Quantity of medication prescribed per dose"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "16fdd0a1-4054-4f20-be6f-400731a630c3",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:47:11.000+03:00",
+                "resourceType": "Observation",
+                "status": "final",
+                "valueQuantity": {
+                    "value": 30
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "dc9b8cd1-30ab-102d-86b0-7a5022ba4115",
+                            "display": "WHO STAGE 1 ADULT"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "1204",
+                            "display": "WHO STAGE 1 ADULT"
+                        }
+                    ]
+                },
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "83b260d9-81f0-4fc1-98b6-27dc1a201090",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "39243cef-b375-44b1-9e79-cbf21bd10878",
+                            "display": "BASELINE STAGE"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99070",
+                            "display": "BASELINE STAGE"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "183de2ac-7af7-464b-b682-5d87a91c025b",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "exam",
+                                "display": "Exam"
+                            }
+                        ]
+                    }
+                ],
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "bcbc7e14-4a02-4cfe-b478-49a3f5e94b50",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "e525c286-74b2-4e30-84ac-c4d5f07c503c",
+                            "display": "BASELINE REGIMEN SET"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99162",
+                            "display": "BASELINE REGIMEN SET"
+                        }
+                    ]
+                },
+                "valueString": "AZT-3TC-NVP, 47.0, 2003-12-16",
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "hasMember": [
+                    {
+                        "reference": "Observation/dda40bca-f3c2-4fd6-a62b-eb0dbfe3e02e",
+                        "type": "Observation"
+                    },
+                    {
+                        "reference": "Observation/95294048-219e-47a6-9774-0cb1c1ba932b",
+                        "type": "Observation"
+                    },
+                    {
+                        "reference": "Observation/90c6da9c-6cbc-4124-bf0f-bcae80642803",
+                        "type": "Observation"
+                    }
+                ],
+                "id": "2028873f-8837-43ef-b80b-6f4c2f1db6b9",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "dcd87b79-30ab-102d-86b0-7a5022ba4115",
+                            "display": "MEDICAL OUTPATIENT"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "90013",
+                            "display": "MEDICAL OUTPATIENT"
+                        }
+                    ]
+                },
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "0d13c76d-fbeb-4e9c-8b1d-7fa9fc48b853",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "dcdfe3ce-30ab-102d-86b0-7a5022ba4115",
+                            "display": "ENTRY POINT INTO HIV CARE"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "90200",
+                            "display": "ENTRY POINT INTO HIV CARE"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "2cb4374d-6d93-49b9-9081-83163b740b89",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "67f18059-89d2-4bd4-a962-957dfeeb3683",
+                        "recorded": "2021-07-19T16:47:11.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "ffe9b82c-d341-47a9-a7ef-89c0f5abba97",
+                            "display": "ARV MED SET"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "165430",
+                            "display": "ARV MED SET"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "hasMember": [
+                    {
+                        "reference": "Observation/8ce013c5-f49d-467b-ac2f-348e7c928840",
+                        "type": "Observation"
+                    },
+                    {
+                        "reference": "Observation/4ce981f0-362c-4587-91b9-7d9a3355ea73",
+                        "type": "Observation"
+                    },
+                    {
+                        "reference": "Observation/79af93d0-5429-4e9a-b057-9bd86a963acb",
+                        "type": "Observation"
+                    }
+                ],
+                "id": "497a7bc3-3e24-4c00-a82f-d576dcfb878c",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:47:11.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "932a0398-8649-4620-ae85-3371a5a9e71e",
+                        "recorded": "2021-07-19T16:47:11.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 0
+                        },
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                                    "code": "treatment"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "low": {
+                            "value": 0
+                        },
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                                    "code": "absolute"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "b0e53f0a-eaca-49e6-b663-d0df61601b70",
+                            "display": "AR REGIMEN DOSE"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99038",
+                            "display": "AR REGIMEN DOSE"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "4ce981f0-362c-4587-91b9-7d9a3355ea73",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:47:11.000+03:00",
+                "resourceType": "Observation",
+                "status": "final",
+                "valueQuantity": {
+                    "value": 30
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "6d7a7a98-2c57-4318-9961-8e61fb427781",
+                            "display": "ANTIBODY HIV TEST"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99079",
+                            "display": "ANTIBODY HIV TEST"
+                        }
+                    ]
+                },
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "1326caa4-5800-4543-bacb-3ca7d1267d18",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "ddcd8aad-9085-4a88-a411-f19521be4785",
+                            "display": "HIV TEST"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99080",
+                            "display": "HIV TEST"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "54a1955a-2d05-46f5-adc1-fd39b6c68cfb",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "exam",
+                                "display": "Exam"
+                            }
+                        ]
+                    }
+                ],
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "fc98178b-7fb5-46ae-83af-5a7a88d5ded4",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "31c5c7aa-4948-473e-890b-67fe2fbbd71a",
+                            "display": "HIV ENROLLMENT DATE"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "165312",
+                            "display": "HIV ENROLLMENT DATE"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "valueDateTime": "2003-12-16T00:00:00+03:00",
+                "id": "5f6b397f-c103-4c40-9a57-eafb9c06cbf7",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "exam",
+                                "display": "Exam"
+                            }
+                        ]
+                    }
+                ],
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "733144c0-c321-11e8-a355-529269fb1459",
+                            "display": "Facility Based Individual Management"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "165138",
+                            "display": "Facility Based Individual Management"
+                        }
+                    ]
+                },
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "400976c9-77a5-41fb-98c4-e741a806ebe8",
+                        "recorded": "2021-07-19T16:47:11.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "73312fee-c321-11e8-a355-529269fb1459",
+                            "display": "Differentiated Service Delivery"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "165143",
+                            "display": "Differentiated Service Delivery"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "696157f8-0eb2-47d6-b303-b9d3d4c863ce",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:47:11.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "dcdf4a6b-30ab-102d-86b0-7a5022ba4115",
+                            "display": "COTRIMOXAZOLE"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "90168",
+                            "display": "COTRIMOXAZOLE"
+                        },
+                        {
+                            "system": "RxNORM",
+                            "code": "10831",
+                            "display": "Sulfamethoxazole and Trimethoprim"
+                        },
+                        {
+                            "system": "RxNORM",
+                            "code": "10831",
+                            "display": "Sulfamethoxazole and Trimethoprim"
+                        },
+                        {
+                            "system": "RxNORM",
+                            "code": "10831",
+                            "display": "Sulfamethoxazole and Trimethoprim"
+                        },
+                        {
+                            "system": "RxNORM",
+                            "code": "10831",
+                            "display": "Sulfamethoxazole and Trimethoprim"
+                        }
+                    ]
+                },
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "4abb5c92-51dc-4bcd-b13d-e0ca7d777361",
+                        "recorded": "2021-07-19T16:47:10.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "1282AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                            "display": "Medication orders"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "1282",
+                            "display": "Medication orders"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "6a0e58a8-4fc2-4c43-899f-799e401a46a5",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:47:10.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "568db8db-7022-4e73-8379-14e5039b7ccd",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "dce12b4f-30ab-102d-86b0-7a5022ba4115",
+                            "display": "DATE POSITIVE HIV TEST CONFIRMED"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "90267",
+                            "display": "DATE POSITIVE HIV TEST CONFIRMED"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "valueDateTime": "2003-12-16T00:00:00+03:00",
+                "id": "6d18f373-60af-48f3-8ef5-c3823b457624",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "exam",
+                                "display": "Exam"
+                            }
+                        ]
+                    }
+                ],
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "dd2b361c-30ab-102d-86b0-7a5022ba4115",
+                            "display": "AZT-3TC-NVP"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99005",
+                            "display": "AZT-3TC-NVP"
+                        }
+                    ]
+                },
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "18ff9d41-32fb-4d17-9409-be0c5848be1a",
+                        "recorded": "2021-07-19T16:47:11.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "dd2b0b4d-30ab-102d-86b0-7a5022ba4115",
+                            "display": "CURRENT ARV REGIMEN"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "90315",
+                            "display": "CURRENT ARV REGIMEN"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "79af93d0-5429-4e9a-b057-9bd86a963acb",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "exam",
+                                "display": "Exam"
+                            }
+                        ]
+                    }
+                ],
+                "issued": "2021-07-19T16:47:11.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "6d255156-e0cd-4bfa-b091-a7c96227aa7e",
+                        "recorded": "2021-07-19T16:47:11.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "referenceRange": [
+                    {
+                        "low": {
+                            "value": 0
+                        },
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                                    "code": "absolute"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "7593ede6-6574-4326-a8a6-3d742e843659",
+                            "display": "ARV REGIMEN DAYS DISPENSED"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99036",
+                            "display": "ARV REGIMEN DAYS DISPENSED"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "8ce013c5-f49d-467b-ac2f-348e7c928840",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:47:11.000+03:00",
+                "resourceType": "Observation",
+                "status": "final",
+                "valueQuantity": {
+                    "unit": "Days",
+                    "value": 30
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "123d7a45-f702-405b-b835-23fcfaaf686a",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "ab505422-26d9-41f1-a079-c3d222000440",
+                            "display": "BASELINE REGIMEN START DATE"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99161",
+                            "display": "BASELINE REGIMEN START DATE"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "valueDateTime": "2003-12-16T00:00:00+03:00",
+                "id": "90c6da9c-6cbc-4124-bf0f-bcae80642803",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "7819b6f2-d525-4cd5-8e66-042fe7bfcd62",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "referenceRange": [
+                    {
+                        "high": {
+                            "value": 150
+                        },
+                        "low": {
+                            "value": 0
+                        },
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                                    "code": "treatment"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "high": {
+                            "value": 250
+                        },
+                        "low": {
+                            "value": 0
+                        },
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                                    "code": "absolute"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "900b8fd9-2039-4efc-897b-9b8ce37396f5",
+                            "display": "BASELINE WEIGHT"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99069",
+                            "display": "BASELINE WEIGHT"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "95294048-219e-47a6-9774-0cb1c1ba932b",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "exam",
+                                "display": "Exam"
+                            }
+                        ]
+                    }
+                ],
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final",
+                "valueQuantity": {
+                    "unit": "Kgs",
+                    "value": 47
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "41706dd5-7e10-4122-a652-f7e2bbd95e52",
+                        "recorded": "2021-07-19T16:47:11.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "159368AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                            "display": "Medication duration"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "159368",
+                            "display": "Medication duration"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "9b807a61-e211-4063-bf9d-17cff9b435eb",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:47:11.000+03:00",
+                "resourceType": "Observation",
+                "status": "final",
+                "valueQuantity": {
+                    "value": 30
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                            "display": "Yes"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "373066001",
+                            "display": "Yes"
+                        },
+                        {
+                            "system": "https://openconceptlab.org/orgs/CIEL/sources/CIEL",
+                            "code": "1065",
+                            "display": "Yes"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "1065",
+                            "display": "Yes"
+                        },
+                        {
+                            "system": "PIH",
+                            "code": "1065",
+                            "display": "null"
+                        },
+                        {
+                            "system": "SNOMED CT",
+                            "code": "373066001",
+                            "display": "null"
+                        },
+                        {
+                            "system": "PIH Malawi",
+                            "code": "1065",
+                            "display": "null"
+                        },
+                        {
+                            "system": "CIEL",
+                            "code": "1065",
+                            "display": "null"
+                        },
+                        {
+                            "system": "AMPATH",
+                            "code": "1065",
+                            "display": "null"
+                        }
+                    ]
+                },
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "eb921d12-a6ee-41d6-9d90-f63995d3c483",
+                        "recorded": "2021-07-19T16:47:10.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "c3d744f6-00ef-4774-b9a7-d33c58f5b014",
+                            "display": "Cotrim Given"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99413",
+                            "display": "Cotrim Given"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "9d119bb4-0f1b-44c8-8bb7-13b460bd6b65",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "exam",
+                                "display": "Exam"
+                            }
+                        ]
+                    }
+                ],
+                "issued": "2021-07-19T16:47:10.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "2ec19932-26b2-4d22-ac0a-99abb8640ba9",
+                        "recorded": "2021-07-19T16:47:10.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "93b2347e-e590-11e9-81b4-2a2ae2dbcce4",
+                            "display": "DAPSONE-CTX MEDSET"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "165304",
+                            "display": "DAPSONE-CTX MEDSET"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "hasMember": [
+                    {
+                        "reference": "Observation/6a0e58a8-4fc2-4c43-899f-799e401a46a5",
+                        "type": "Observation"
+                    },
+                    {
+                        "reference": "Observation/9d119bb4-0f1b-44c8-8bb7-13b460bd6b65",
+                        "type": "Observation"
+                    },
+                    {
+                        "reference": "Observation/16fdd0a1-4054-4f20-be6f-400731a630c3",
+                        "type": "Observation"
+                    },
+                    {
+                        "reference": "Observation/9b807a61-e211-4063-bf9d-17cff9b435eb",
+                        "type": "Observation"
+                    }
+                ],
+                "id": "c52c8ca1-fe69-4f96-8367-949715839db9",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:47:10.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "e06ac289-2920-4b85-80c9-805c69b6e5a9",
+                            "display": "ART Refill"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "164972",
+                            "display": "ART Refill"
+                        }
+                    ]
+                },
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "d6c8cf97-7e99-49a1-bab3-6219ec618216",
+                        "recorded": "2021-07-19T16:47:10.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "160288AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                            "display": "Reason for appointment/visit"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "160288",
+                            "display": "Reason for appointment/visit"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "cea41b0e-d681-48c9-8af8-03a2beac5e3f",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "exam",
+                                "display": "Exam"
+                            }
+                        ]
+                    }
+                ],
+                "issued": "2021-07-19T16:47:10.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "dcd69c06-30ab-102d-86b0-7a5022ba4115",
+                            "display": "NO"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "90004",
+                            "display": "NO"
+                        }
+                    ]
+                },
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "b3f10bee-6388-469e-b4a0-3cf459344b79",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "902e30a1-2d10-4e92-8f77-784b6677109a",
+                            "display": "PRIOR ART"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99055",
+                            "display": "PRIOR ART"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "d295a70c-a4de-4006-b11b-bc29ea850148",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "dcd69c06-30ab-102d-86b0-7a5022ba4115",
+                            "display": "NO"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "90004",
+                            "display": "NO"
+                        }
+                    ]
+                },
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "f0f49dd6-9801-438d-9f2a-b66bf05740c4",
+                        "recorded": "2021-07-19T16:47:11.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "cc183c11-0f94-4992-807c-84f33095ce37",
+                            "display": "Stable In DSDM"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "165144",
+                            "display": "Stable In DSDM"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "d8a375e0-400c-4b32-a66c-1ac8870c4c1c",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "exam",
+                                "display": "Exam"
+                            }
+                        ]
+                    }
+                ],
+                "issued": "2021-07-19T16:47:11.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "code": "dd2b361c-30ab-102d-86b0-7a5022ba4115",
+                            "display": "AZT-3TC-NVP"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99005",
+                            "display": "AZT-3TC-NVP"
+                        }
+                    ]
+                },
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "01458097-0ed3-434a-8bfb-cf06bc263dbc",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "c3332e8d-2548-4ad6-931d-6855692694a3",
+                            "display": "BASELINE REGIMEN"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99061",
+                            "display": "BASELINE REGIMEN"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "dda40bca-f3c2-4fd6-a62b-eb0dbfe3e02e",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "50f8c11c-4525-42fc-bb75-0e97691529fe",
+                        "recorded": "2021-07-19T16:47:10.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "dcac04cf-30ab-102d-86b0-7a5022ba4115",
+                            "display": "RETURN VISIT DATE"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "5096",
+                            "display": "RETURN VISIT DATE"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "valueDateTime": "2004-04-05T00:00:00+03:00",
+                "id": "ea22b86f-c093-4ad4-9330-b1845525e7c5",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:47:10.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "971672b5-f63d-41f3-9105-114ad3d8c0fe",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "cabfa0e9-ddae-438b-a052-6d5c97164242",
+                            "display": "CARE ENTRY POINT SET"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99116",
+                            "display": "CARE ENTRY POINT SET"
+                        }
+                    ]
+                },
+                "valueString": "MEDICAL OUTPATIENT",
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "hasMember": [
+                    {
+                        "reference": "Observation/2cb4374d-6d93-49b9-9081-83163b740b89",
+                        "type": "Observation"
+                    }
+                ],
+                "id": "ec93954c-f1c2-467f-8ee8-6ac366e7791a",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "7e39743d-137a-4a98-8454-33050c3864be",
+                        "recorded": "2021-07-19T16:47:10.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "referenceRange": [
+                    {
+                        "high": {
+                            "value": 250
+                        },
+                        "low": {
+                            "value": 0
+                        },
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                                    "code": "absolute"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                            "display": "Weight (kg)"
+                        },
+                        {
+                            "system": "http://loinc.org",
+                            "code": "3141-9",
+                            "display": "Weight (kg)"
+                        },
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "27113001",
+                            "display": "Weight (kg)"
+                        },
+                        {
+                            "system": "https://openconceptlab.org/orgs/CIEL/sources/CIEL",
+                            "code": "5089",
+                            "display": "Weight (kg)"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "5089",
+                            "display": "Weight (kg)"
+                        },
+                        {
+                            "system": "PIH Malawi",
+                            "code": "5089",
+                            "display": "null"
+                        },
+                        {
+                            "system": "AMPATH",
+                            "code": "5089",
+                            "display": "null"
+                        },
+                        {
+                            "system": "LOINC",
+                            "code": "3141-9",
+                            "display": "null"
+                        },
+                        {
+                            "system": "SNOMED CT",
+                            "code": "27113001",
+                            "display": "null"
+                        },
+                        {
+                            "system": "PIH",
+                            "code": "5089",
+                            "display": "null"
+                        },
+                        {
+                            "system": "org.openmrs.module.mdrtb",
+                            "code": "WEIGHT",
+                            "display": "null"
+                        },
+                        {
+                            "system": "CIEL",
+                            "code": "5089",
+                            "display": "null"
+                        }
+                    ]
+                },
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "ed3f34fe-b508-4d16-8034-783f6680de3c",
+                "encounter": {
+                    "reference": "Encounter/925b104a-57bd-4477-b44c-9b545137ff72",
+                    "type": "Encounter"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "exam",
+                                "display": "Exam"
+                            }
+                        ]
+                    }
+                ],
+                "issued": "2021-07-19T16:47:10.000+03:00",
+                "resourceType": "Observation",
+                "status": "final",
+                "valueQuantity": {
+                    "unit": "kg",
+                    "value": 47
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "contained": [
+                    {
+                        "agent": [
+                            {
+                                "role": [
+                                    {
+                                        "coding": [
+                                            {
+                                                "system": "http://terminology.hl7.org/CodeSystemv3-ParticipationType",
+                                                "code": "AUT",
+                                                "display": "author"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://terminology.hl7.org/CodeSystemprovenance-participant-type",
+                                            "code": "author",
+                                            "display": "Author"
+                                        }
+                                    ]
+                                },
+                                "who": {
+                                    "reference": "Practitioner/8f9fc2f1-0a39-478b-99ec-b600af5ebcaf",
+                                    "display": "John Lugemwa",
+                                    "type": "Practitioner"
+                                }
+                            }
+                        ],
+                        "activity": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystemv3-DataOperation",
+                                    "code": "CREATE",
+                                    "display": "create"
+                                }
+                            ]
+                        },
+                        "id": "5e81d9ee-4615-4282-b50e-d636d4959bee",
+                        "recorded": "2021-07-19T16:44:39.000+03:00",
+                        "resourceType": "Provenance"
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "89d3ee61-7c74-4537-b199-4026bd6a3f67",
+                            "display": "HIV TEST FACILITY"
+                        },
+                        {
+                            "system": "UgandaEMR",
+                            "code": "99081",
+                            "display": "HIV TEST FACILITY"
+                        }
+                    ]
+                },
+                "valueString": "NEBBI HOSPITAL",
+                "effectiveDateTime": "2003-12-16T00:00:00+03:00",
+                "subject": {
+                    "reference": "Patient/e3117126-4f94-460b-a272-1e36dfb4ffd2",
+                    "display": "RAPHAEL ABEKA (OpenMRS ID: 10968K)",
+                    "type": "Patient"
+                },
+                "id": "ee7d6a06-0a4d-4650-82ec-305b6c8a6e42",
+                "encounter": {
+                    "reference": "Encounter/945d380b-2841-42c4-b7c9-6ad2bf5dfed7",
+                    "type": "Encounter"
+                },
+                "issued": "2021-07-19T16:44:39.000+03:00",
+                "resourceType": "Observation",
+                "status": "final"
+            }
+        }
+    ]
+}
